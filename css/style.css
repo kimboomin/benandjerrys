@@ -1,0 +1,2282 @@
+@charset "utf-8";
+#wrap{
+    transition: 0.3s;
+}
+#wrap.active{
+    background-color: #006EB6;
+}
+/* 배너 부분 */
+section.banner{
+    width: 100%;
+    height: 1080px;
+    background: url(../img/banner.jpg) no-repeat center bottom;
+    background-size: cover;
+    padding-top: 25px;
+}
+.header{
+    width: 1600px;
+    height: 93px;
+    background-color: #96C4E0;
+    border-radius: 100px;
+    position: relative;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+}
+ul.head{
+    display: flex;
+    justify-content: space-between;
+} 
+.head-logo{
+    width: 300px;
+    height: 66px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    cursor: pointer;
+}
+label[for="menu-btn"]{
+    position: relative;
+    display: block;
+    width: 40px;
+    height: 24px;
+    margin-left: 71px;
+    margin-top: 34px;
+    cursor: pointer;
+}
+label[for="menu-btn"] span{
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #141414;
+    transition: 0.3s;
+    z-index: 99999;
+}
+label[for="menu-btn"] span:nth-child(1){
+    top: 0%;
+}
+label[for="menu-btn"] span:nth-child(2){
+    top: 50%;
+}
+label[for="menu-btn"] span:nth-child(3){
+    top: 100%;
+}
+#menu-btn:checked ~ label[for="menu-btn"] span:nth-child(1){
+    transform: rotate(45deg);
+    top: 50%;
+}
+#menu-btn:checked ~ label[for="menu-btn"] span:nth-child(2){
+    opacity: 0;
+}    
+#menu-btn:checked ~ label[for="menu-btn"] span:nth-child(3){
+    transform: rotate(-45deg);
+    top: 50%;
+}
+input{
+    display: none;
+}
+.head-right{
+    margin-top: 32px;
+    margin-right: 60px;
+    margin-bottom: 32px;
+    display: flex;
+    font-size: 1.5rem;
+}
+.head-right a{
+    font-family: "Mayeka Demi Bold Demo";
+    color: #141414;
+}
+.head-menu.shop a:hover,
+.head-menu.cart a:hover{
+    color: #CFD7DB;
+}
+.head-menu.shop a{
+    margin-right: 20px;
+}
+.head-menu.cart a{
+    margin-right: 5px;
+}
+
+/* 햄버거 버튼 클릭하면 열리는 서브메뉴박스  */
+.menu-bar-box{
+    width: 465px;
+    height: 1080px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: 0.3s;
+    opacity: 0;
+    z-index: -1;
+    background-color: #96C4E0;
+}
+.menu-bar-box.active{
+    opacity: 1;
+    z-index: 999;
+}
+.menu-bar-icon{
+    position: absolute;
+    width: 324px;
+    height: 504px;
+    top: 150px;
+    left: 30px;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+}
+.menu-bar-icon .menu{
+    font-size: 5rem;
+    color: #F4F9FC;
+    opacity: 0.9;
+    margin-bottom: 40px;
+    transition: 0.3s;
+}
+.menu-bar .menu:hover{
+    color: #ece7b3;
+}
+.menu-icon .icon:hover{
+    fill: #ece7b3;
+}
+.menu-icon{
+    display: flex;
+    height: 40px;
+    fill: #F4F9FC;
+    margin-top: 200px;
+}
+.menu-icon .icon{
+    width: 40px;
+    height: 35px;
+    margin-right: 30px;
+    transition: 0.3s;
+}
+.header-txt-btn{
+    display: flex;
+    flex-direction: column;
+    width: 651px;
+    height: 630px;
+    margin-top: 116px;
+    margin-left: 143px;
+}
+.head-txtes{
+    width: 100%;
+    height: 410px;
+}
+.main-head-txt p{
+    font-size: 6.25rem;
+    font-family: "Mayeka Bold Demo";
+    color: #F4F9FC;
+}
+.main-first{
+    display: flex;
+}
+.main-s{
+    margin-left: 20px;
+}
+.sub-head-txt a{
+    margin-top: 10px;
+    font-family: "pretendard";
+    font-size: 1.5rem;
+    font-weight: 200;
+    color: #F4F9FC;
+}
+.roll-btn{
+    background-color: #D5E7F2;
+    border-radius: 100px;
+    width: 310px;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    margin-top: 120px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.roll-btn h3{
+    width: 100%;
+    font-size: 2rem;
+    white-space: nowrap;
+    color: #276083;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+}
+@keyframes roll-btn{
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+.roll-btn:hover .moving.btn1{
+    animation: roll-btn 2s linear infinite;
+}
+.roll-btn:hover .moving.btn2{
+    animation: roll-btn 2s linear infinite;
+}
+.roll-box{
+    display: flex;
+    width: 200%;
+}
+
+/* sec-1 */
+.sec-1{
+    height: 2060px;
+    width: 100%;
+    /* background-color: #96C4E0; */
+    padding: 145px 20px 330px 10px;
+}
+.top-txtes{
+    color: #F4F9FC;
+    display: flex;
+    flex-direction: column;
+    white-space: nowrap;
+    align-items: flex-end;
+    margin-bottom: 176px;
+    margin-right: 110px;
+}
+.main-sec1-txt h2{
+    text-transform: uppercase;
+    font-family: "Mayeka Bold Demo";
+}
+.main-1,
+.main-2{
+    display: flex;
+    font-size: 4.375rem;
+}
+h2.txt1{
+    margin-right: 25px;
+}
+.main-sec1-txt{
+    margin-bottom: 10px;
+}
+h4.subs{
+    font-family: "pretendard";
+    font-weight: 300;
+    font-size: 1.5rem;
+   padding-right: 509px;
+}
+.sec-1 .slide-wrapper{
+    display: flex;
+    height: 1109px;
+}
+.sec-1 .slide{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 38px;
+    position: relative;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+}
+.sec-1 .background{
+    width: 443px;
+    height: 550px;
+    border-radius: 200px;
+    padding-left: 88px;
+
+}
+.sec-1 .pint{
+    font-family: "TT Wellingtons Trl";
+    font-size: 1.875rem;
+    text-transform: uppercase;
+}
+.sec-1 .name{
+    text-transform: capitalize;
+    margin-top: 10px;
+    font-size: 3.125rem;
+    font-family: "pretendard";
+    font-weight: 500;
+}
+.sec-1 .flavor{
+    margin-top: 30px;
+    font-family: "pretendard";
+    font-size: 1.25rem;
+    font-weight: 300;
+    white-space: nowrap;
+}
+.sec-1 .txt-box{
+    text-align: left;
+    position: absolute;
+    top: 460px;
+    left: 0;
+}
+.sec-1 .slide:nth-child(even){
+    margin-top: 176px;
+}
+.sec-1 .slide.box1 .background,
+.sec-1 .slide.box1 .roll-btn{
+    background-color: #EADBA6;
+    opacity: 85%;
+}
+.sec-1 .slide.box2 .background,
+.sec-1 .slide.box2 .roll-btn{
+    background-color: #ED8686;
+    opacity: 85%;
+}
+.sec-1 .slide.box3 .background,
+.sec-1 .slide.box3 .roll-btn{
+    background-color: #B47B52;
+    opacity: 85%;
+}
+.sec-1 .slide.box4 .background,
+.sec-1 .slide.box4 .roll-btn{
+    background-color: #E1BF8B;
+    opacity: 85%;
+}
+.sec-1 .slide.box5 .background,
+.sec-1 .slide.box5 .roll-btn{
+    background-color: #E3AA55;
+    opacity: 85%;
+}
+.sec-1 .slide.box6 .background,
+.sec-1 .slide.box6 .roll-btn{
+    background-color: #B5E2CF;
+    opacity: 85%;
+}
+.sec-1 .slide.box7 .background,
+.sec-1 .slide.box7 .roll-btn{
+    background-color: #E2D8B5;
+    opacity: 85%;
+}
+.sec-1 .slide.box8 .background,
+.sec-1 .slide.box8 .roll-btn{
+    background-color: #E0B2E4;
+    opacity: 85%;
+}
+.sec-1 .slide-wrap1,
+.sec-1 .slide-wrap2{
+    display: flex;
+}
+.sec-1 .img-box{
+    width: 266px;
+    height: 253px;
+    margin-top: 148px;
+}
+.sec-1 .img-box img{
+    object-fit: contain;
+    transition: 0.3s;
+}
+.sec-1 .slide p,
+.sec-1 .roll-btn h3{
+    color: #F4F9FC;
+}
+.sec-1 .roll-btn h3{
+    text-transform: uppercase;
+    font-size: 1.25rem;
+}
+.sec-1 .roll-btn{
+    width: 210px;
+    height: 85px;
+    line-height: 85px;
+    margin-top: 230px;
+}
+.sec-1 .background:hover .img-box img{
+    transform: scale(1.1);
+}
+.slide-wrap1,
+.slide-wrap2{
+    animation: flavor 50s linear infinite;
+}
+@keyframes flavor{
+    100%{
+        transform: translateX(-100%);
+    }
+}
+
+/* sec-2 */
+.sec-2{
+    height: 1096px;
+    /* background-color: #006EB6; */
+    padding: 125px 245px 221px 256px;
+}
+.sec2-con{
+    display: flex;
+    justify-content: space-between;
+}
+.sec2_txt_btn{
+    display: flex;
+    flex-direction: column;
+}
+.sec2-txtes{
+    margin-top: 235px;
+}
+.main-sec2-txt{
+    color: #F4F9FC;
+    font-weight: 800;
+    font-size: 5rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-family: "Mayeka Bold Demo";
+}
+.sub-sec2-txt{
+    white-space: nowrap;
+}
+.sec2-sub2{
+    margin-top: 10px;
+}
+.sec2-sub1 p,
+.sec2-sub2 span{
+    font-size: 1.4rem;
+    font-weight: 300;
+    font-family: "pretendard"; 
+    color: #F4F9FC;
+}
+.sec2-sub1 p{
+    line-height: 1.8;
+}
+.sec-2 .roll-btn{
+    width: 250px;
+    height: 80px;
+    margin-top: 135px;
+    background-color: #96C4E0;
+}
+.sec-2 .roll-btn h3{
+    line-height: 80px;
+    font-size: 1.125rem;
+    color: #F4F9FC;
+    font-weight: 200;
+    text-transform: uppercase;
+}
+.sec2-rights{
+    width: 720px;
+    height: 750px;
+}
+.sec2-rights img{
+    object-fit: contain;
+}
+
+/* sec-3 */
+.sec-3{
+    height: 500px;
+    padding: 0 160px 0 160px;
+    background-color: #FCEDBA;
+    position: relative;
+    overflow: hidden;
+}
+.sec-3 .fixed-head-txt{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+.sec-3 .fixed-head-txt h1{
+     font-size: 3rem;
+     text-transform: uppercase;
+     font-family: "pretendard";
+     font-weight: 600;
+     cursor: pointer;
+}
+.fixed-head-txt .head1{
+    margin-right: 10px;
+}
+.sec3.animate{
+    height: 418px;
+    width: auto;
+    position: absolute;
+}
+.sec3.animate.box1{
+    left: 160px;
+    top: 500px;
+    animation: txt1 20s linear infinite;
+}
+.sec3.animate.box2{
+    right: 160px;
+    top: -418px;
+    animation: txt2 20s linear infinite;
+}
+@keyframes txt1{
+    0%{
+        top: 500px;
+    }
+    100%{
+        top: -418px;
+    }
+}
+@keyframes txt2{
+    0%{
+        top: -418px;
+    }
+    100%{
+        top: 500px;
+    }
+}
+
+.sec-3 .item-symbol{
+    width: 100px;
+    height: 100px;
+    margin-top: 30px;
+}
+.sec-3 .item-symbol img{
+    object-fit: contain;
+    cursor: pointer;
+}
+.sec-3 .item-txt{
+    font-size: 1.5rem;
+    color: #222;
+    font-family: "pretendard";
+    font-weight: 500;
+    margin-top: 20px;
+}
+.sec-3 .tabs{
+    width: 525px;
+    height: 280px;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.sec-3 .items{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 1575px;
+    height: 100%;
+    transition: 0.3s;
+}
+.sec-3 .item{
+    height: 100%;
+    width: 525px;
+    padding: 0 48px 0 48px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.sec-3 span{
+    margin-top: 30px;
+    text-align: center;
+    font-family: "pretendard";
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: 300;
+}
+.sec-3 .btn{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.btn label{
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    background-color: transparent;
+    border: 1px solid #222;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+/* 원형 버튼 오렌지컬러로
+바꿔주기 */
+input[id="tab1"]:checked ~ .btn label[for="tab1"]{
+    background-color: #222;
+}
+input[id="tab2"]:checked ~ .btn label[for="tab2"]{
+    background-color: #222;
+}
+input[id="tab3"]:checked ~ .btn label[for="tab3"]{
+    background-color: #222;
+}
+
+/* 체크되면 왼쪽으로 이동하게끔 설정 */
+input[id="tab1"]:checked ~ .tabs .items{
+    left: 0;
+}
+input[id="tab2"]:checked ~ .tabs .items{
+    left: -525px;
+}
+input[id="tab3"]:checked ~ .tabs .items{
+    left: -1050px;
+}
+
+/* sec-4 */
+.sec-4{
+    height: 1193px;
+    padding: 222px 235px 221px 322px;
+    /* background-color: #006EB6; */
+    background-color: #96C4E0;
+}
+.sec-4.active{
+    background-color: transparent;
+}
+.sec4-con{
+    display: flex;
+    justify-content: space-between;
+}
+.sec4_txt_btn{
+    display: flex;
+    flex-direction: column;
+    margin-top: 183px;
+}
+/* .sec4-txtes{
+    margin-bottom: 166px;
+} */
+.sec4-rights{
+    width: 720px;
+    height: 750px;
+}
+.sec4-rights img{
+    object-fit: contain;
+}
+.main-sec4-txt{
+    color: #F4F9FC;
+    font-size: 5rem;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+.main-sec4-txt p{
+    font-family: "Mayeka Bold Demo";
+}
+.sub-sec4-txt{
+    color: #F4F9FC;
+    font-size: 1.5rem;
+    /* white-space: nowrap; */
+}
+.sub-sec4-txt span{
+    font-family: "pretendard";
+    font-weight: 300;
+    white-space: nowrap;
+}
+.sub-sec4-txt .sub2{
+    margin-top: 10px;
+    line-height: 1.5;
+}
+.sec-4 .roll-box h3{
+    color: #F4F9FC;
+    text-transform: uppercase;
+    font-size: 1.125rem;
+    line-height: 80px;
+}
+.sec-4 .roll-btn{
+    width: 249px;
+    height: 80px;
+    background-color: #96C4E0;
+}
+
+/* sec-5 */
+.sec-5{
+    height: 1273px;
+    background-color: #006EB6;
+    padding: 166px 162px 93px 162px;
+}
+.sec5-con{
+    display: flex;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+.sec5-txtes{
+    margin-bottom: 50px;
+}
+.sec5_txt_btn{
+    width: 641px;
+    height: 874px;
+    background-color: #96C4E0;
+    border-radius: 0 150px 0 150px;
+    z-index: 99;
+    padding: 40px 128px 90px 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.main-sec5-txt{
+    margin-bottom: 20px;
+} 
+.main-sec5-txt h2{
+    color: #F4F9FC;
+    text-transform: uppercase;
+    font-size: 3.125rem;
+    font-family: "Mayeka Bold Demo";
+}
+.main-sec5-txt .bens{
+    display: flex;  
+}
+.main-sec5-txt .bens-l{
+    margin-right: 20px;
+}
+.sub-sec5-txt span{
+    color: #F4F9FC;
+    font-family: "pretendard";
+    font-size: 1.125rem;
+    font-weight: 200;
+}
+.sec5-hover-menu{
+    height: 321px;
+}
+.sec5-hover-menu li{
+    width: 432px;
+    position: relative;
+    /* top: 0;
+    left: 0; */
+    overflow: hidden;
+    margin-bottom: 38px;
+
+    transition: 0.3s;
+}
+.sec5-hover-menu li:last-child{
+    margin-bottom: 0;
+}
+.sec5-hover-menu li::before{
+    content: '';
+    width: 100%;
+    height: 1px;
+    background-color: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.sec5-hover-menu li::after{
+    content: '';
+    width: 100%;
+    height: 1px;
+    background-color: #222;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translateX(-100%);
+    transition: 1.4s;
+    z-index: 9;
+}
+.sec5-hover-menu li:hover::after{
+    transform: translateX(0);
+}
+.sec5-hover-menu a{
+    font-family: "pretendard";
+    color: #F4F9FC;
+    font-weight: 300;
+    font-size: 1.6rem;
+    text-transform: capitalize;
+    padding-bottom: 20px;
+    width: 100%;
+
+    transition: 0.3s;
+}
+.sec5-hover-menu a:hover{
+    color: #222;
+}
+.sec5-pic{
+    width: 1116px;
+    height: 933px;
+    position: absolute;
+    left: 480px;
+    top: 81px;
+}
+.sec5-pic img{
+    border-radius: 200px 0 200px 0;
+}
+.sec-5 .roll-btn{
+    background-color: transparent;
+    border: 2px solid #F4F9FC;
+    width: 250px;
+    height: 70px;
+    line-height: 70px;
+}
+.sec-5 .roll-btn h3{
+    text-transform: uppercase;
+    color: #F4F9FC;
+    font-size: 1.125rem;
+}
+
+/* sec-6 */
+.sec-6{
+    height: 1589px;
+    background-color: #FCEDBA;
+    padding: 139px 40px 326px 40px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+}
+.sec-6 .mains{
+    font-size: 5rem;
+    color: #222222;
+    text-transform: uppercase;
+    font-family: "Mayeka Bold demo";
+}
+.sub-sec6-txt{
+    padding-right: 50px;
+}
+.sub-sec6-txt span{
+    font-family: "pretendard";
+    color: #222;
+    font-size: 1.5rem;
+    margin-top: 20px;
+    font-weight: 300;
+}
+.sec6-box-con{
+    display: flex;
+    justify-content: space-between;
+    /* flex-wrap: wrap; */
+}
+.sec-6 .top-txtes{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-bottom: 239px;
+    white-space: nowrap;
+    padding-right: 144px;
+}
+.sec-6 .h-box{
+    overflow: hidden;
+    cursor: pointer;
+    margin-right: 10px;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+.sec-6 .h-box img{
+    width: 400px;
+    height: 500px;
+    border-radius: 150px 150px 0 0;
+}
+.sec-6 .txt-box{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #d9d9d99b;
+    width: 400px;
+    height: 500px;
+    border-radius: 150px 150px 0 0;
+
+    transition: 0.3s;
+    opacity: 0;
+}
+.sec-6 .txt-box:hover{
+    opacity: 1;
+}
+.sec-6 .txt-box p{
+    color: #222222c0;
+    font-size: 2.5rem;
+    font-family: "pretendard";
+    text-align: center;
+    white-space: nowrap;
+    text-transform: capitalize;
+    font-weight: 600;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/* footer */
+.footer{
+    height: 572px;
+    background-color: #96C4E0;
+    padding: 74px 146px;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+.footer_left_right{
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.footer-left{
+    display: flex;
+}
+.footer-left .menu{
+    margin-right: 112px;
+}
+.footer-left .menu p,
+.footer-left .info p,
+.footer-right p{
+    font-family: "TT Wellingtons Trl";
+    color: #222;
+}
+.footer .main-t{
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 54px;
+}
+.footer .sub-menu p{
+    font-size: 1.5rem;
+    margin-bottom: 22px;
+    font-weight: 500;
+    transition: 0.3s;
+    white-space: nowrap;
+}
+.footer .info{
+    display: flex;
+    flex-direction: column;
+}
+.footer-right{
+    display: flex;
+    flex-direction: column;
+}
+.footer input::placeholder{
+    color: #222;
+    opacity: 1;
+    transition: 0.3s;
+}
+.footer input:focus::placeholder{
+    opacity: 0;
+}
+.footer input{
+    display: block;
+    border: none;
+    border-bottom: 2px solid #222;
+    background-color: transparent;
+    outline: none;
+    width: 434px;
+    height: 62px;
+    margin-right: 31px;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+.footer-right-sub{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer-right .btn{
+    background-color: #F4F9FC;
+    border-radius: 100px;
+    width: 175px;
+    height: 65px;
+    transition: 0.3s;
+}
+.footer-right .btn:hover{
+    background-color: #CFD7DB;
+}
+.footer-right .btn p{
+    text-align: center;
+    line-height: 65px;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+.footer-logo{
+    width: 260px;
+    height: 105px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.footer-logo img{
+    object-fit: contain;
+}
+.footer .sub-menu p:hover{
+    color: #D5E7F2;
+}
+
+/* 미디어 쿼리 */
+@media(max-width: 1800px){
+    .sec-2{
+        padding: 125px 200px 200px 200px;
+    }
+    .sec-4{
+        padding: 222px 200px 221px 300px;
+    }
+    .sec5-pic{
+        width: 1000px;
+        height: 900px;
+    }
+    .sec-6 .mains{
+        font-size: 4.8rem;
+    }
+    .sub-sec6-txt{
+        padding-right: 30px;
+    }
+    .footer .sub-menu p{
+        font-size: 1.4rem;
+    }
+    .footer-logo{
+        width: 250px;
+    }
+    .footer{
+        padding: 70px 130px;
+    }
+}
+@media(max-width: 1700px){
+    .header{
+        width: 1400px;
+    }
+    .head-right{
+        font-size: 1.3rem;
+    }
+    label[for="menu-btn"]{
+        width: 35px;
+        height: 20px;
+    }
+    .head-logo{
+        width: 200px;
+        height: 50px;
+    }
+    .header-txt-btn{
+        width: 100%;
+        height: auto;
+    }
+    .head-txtes1{
+        height: auto;
+    }
+    .roll-btn{
+        width: 280px;
+    }
+    .roll-btn h3{
+        font-size: 1.8rem;
+    }
+    .main-head-txt p{
+        font-size: 5.9rem;
+    }
+    .sub-head-txt a{
+        font-size: 1.3rem;
+    }
+    .main-1, .main-2{
+        font-size: 4rem;
+    }
+    h4.subs{
+        padding-right: 460px;
+        font-size: 1.4rem;
+    }
+    .menu-bar-icon .menu{
+        font-size: 4rem;
+    }
+    .sec-1{
+        padding: 145px 20px 200px 10px;
+    }
+    .sec-1 .pint{
+        font-size: 1.6rem;
+    }
+    .sec-1 .name{
+        font-size: 2.8rem;
+    }
+    .sec-2{
+        padding: 200px;
+    }
+    .sec2-rights{
+        width: 650px;
+        height: 650px;
+    }
+    .sec2-txtes{
+        margin-top: 100px;
+    }
+    .main-sec2-txt{
+        font-size: 4.8rem;
+    }
+    .sec-3 .fixed-head-txt h1{
+        font-size: 2.5rem;
+    }
+    .sec4-rights{
+        width: 700px;
+        height: 700px;
+    }
+    .main-sec4-txt{
+        font-size: 4.8rem;
+    }
+    .sec4_txt_btn{
+        margin-top: 100px;
+    } 
+    .sec5-pic{
+        width: 950px;
+        height: 800px;
+        left: 400px;
+    }
+    .sec5_txt_btn{
+        width: 550px;
+        height: 820px;
+        padding: 40px 0px 0px 50px;
+        justify-content: normal;
+    } 
+    .sec5-hover-menu a{
+        font-size: 1.5rem;
+    }
+    .roll-btn{
+        margin-top: 80px;
+    }
+    .sec-6 .top-txtes{
+        margin-bottom: 180px;
+        padding-right: 100px;
+    }
+    .sec-6{
+        height: auto;
+    }
+    .sec-6 .txt-box p{
+        font-size: 2.2rem;
+    }
+    .sec6-box-con{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .sec-6 .h-box{
+        width: calc(50% - 40px);
+        margin-right: 0;
+        padding-left: 180px;
+    }
+    .sec-6 .txt-box{
+        margin-left: 180px;
+    }
+    .sec-6 .h-box:nth-child(3),
+    .sec-6 .h-box:nth-child(4){
+        margin-top: 50px;
+    }
+    .footer{
+        padding: 70px;
+        height: 500px;
+    }
+    .footer .main-t{
+        font-size: 1.6rem;
+        margin-bottom: 40px;
+    }
+    .footer .sub-menu p{
+        font-size: 1.2rem;
+        margin-bottom: 18px;
+    }
+    .footer-right .btn p{
+        font-size: 1rem;
+    }
+    .footer-right .btn{
+        width: 140px;
+        height: 60px;
+    }
+    .footer input{
+        font-size: 1rem;
+        width: 380px;
+        height: 100%;
+    }
+    
+}
+@media(max-width: 1500px){
+    .header{
+        width: 1200px;
+    }
+    .head-logo{
+        width: 150px;
+    }
+    .head-right{
+        font-size: 1.2rem;
+    }
+    .main-head-txt p{
+        font-size: 5rem;
+    }
+    .sub-head-txt a{
+        font-size: 1rem;
+    }
+    .roll-btn{
+        margin-top: 50px;
+        width: 250px;
+        height: 90px;
+        line-height: 90px;
+    }
+    .roll-btn h3{
+        font-size: 1.5rem;
+    }
+    .top-txtes{
+        margin-right: 80px;
+    }
+    .main-1, .main-2{
+        font-size: 3.5rem;
+    }
+    h4.subs{
+        padding-right: 380px;
+        font-size: 1.3rem;
+    }
+    .menu-bar-box{
+        width: 350px;
+    }
+    .menu-bar-icon .menu {
+        font-size: 3.5rem;
+    }
+    .sec-1{
+        padding: 145px 20px 100px 10px;
+        height: auto;
+    }
+    .sec-2{
+        height: auto;
+        padding: 150px;
+    }
+    .main-sec2-txt{
+        font-size: 4rem;
+    }
+    .sec2-sub1 p, .sec2-sub2 span{
+        font-size: 1.3rem;
+    }
+    .sec2-rights{
+        width: 450px;
+        height: 500px;
+    }
+    .sec-2 .roll-btn{
+        margin-top: 100px;
+    }
+    .sec-4{
+        height: auto;
+        padding: 200px;
+    }
+    .sec4_txt_btn{
+        margin-top: 50px;
+    }
+    .sec4-rights{
+        width: 450px;
+        height: 500px;
+    }
+    .main-sec4-txt{
+        font-size: 4rem;
+    }
+    .sub-sec4-txt{
+        font-size: 1.3rem;
+    }
+    .sec-4 .roll-btn{
+        margin-top: 100px;
+    }
+    /* .sec4-con{
+        flex-wrap: wrap;
+    } */
+    .sec5-pic{
+        width: 800px;
+    }
+    .sec5-hover-menu a{
+        font-size: 1.4rem;
+    }
+    .main-sec5-txt h2{
+        font-size: 3rem;
+    }
+    .sub-sec5-txt span{
+        font-size: 1rem;
+    }
+    .sec-5 .roll-btn{
+        width: 230px;
+        height: 60px;
+        line-height: 60px;
+    }
+    .sec-5 .roll-btn h3{
+        font-size: 1rem;
+        letter-spacing: 1px;
+    }
+    .sec-6{
+        padding: 139px 40px 300px 40px;
+    }
+    .sec-6 .mains{
+        font-size: 4.5rem;
+    }
+    .sub-sec6-txt span{
+        font-size: 1.4rem;
+    }
+    .sec-6 .top-txtes{
+        padding-right: 80px;
+    }
+    .sec-6 .h-box{
+        padding-left: 120px;
+    }
+    .sec-6 .txt-box{
+        margin-left: 120px;
+    }
+    .footer .main-t{
+        font-size: 1.5rem;
+    }
+    .footer .sub-menu p{
+        font-size: 1.1rem;
+        margin-bottom: 15px;
+    }
+    .footer{
+        padding: 60px;
+        height: 450px;
+    }
+
+}
+@media(max-width: 1300px){
+    .header{
+        width: 1100px;
+    }
+    .sec-2{
+        padding: 180px;
+    } 
+    .main-sec2-txt{
+        font-size: 3.5rem;
+    }
+    .sec2-sub1 p, .sec2-sub2 span{
+        font-size: 1.2rem;
+    }
+    .sec-4{
+        padding: 180px;
+    }
+    .main-sec4-txt{
+        font-size: 3.5rem;
+    }
+    .sub-sec4-txt{
+        font-size: 1.2rem;
+    }
+    .sec5-pic{
+        width: 600px;
+    }
+    .sec5-hover-menu a{
+        font-size: 1.3rem;
+    }
+    .sec-6 .h-box{
+        padding-left: 100px;
+    }
+    .sec-6 .txt-box{
+        margin-left: 100px;
+    }
+    .footer .main-t{
+        font-size: 1.3rem;
+    }
+    .footer .sub-menu p{
+        font-size: 1rem;
+    }
+    .footer-logo{
+        width: 200px;
+    }
+}
+/* 1200에서 모바일 그리드로 변경 */
+@media(max-width: 1200px){
+    .header{
+        width: 1000px;
+    }
+    .head-menu.shop a{
+        margin-right: 10px;
+    }
+    .sec-1 .top-txtes{
+        margin-right: 0;
+        align-items: center;
+    }
+    .main-sec1-txt{
+        margin-bottom: 25px;
+    }
+    .main-1, .main-2 {
+        font-size: 3rem;
+    }
+    h4.subs{
+        padding-right: 270px;
+    }
+    .sec-2{
+        padding: 0;
+        padding-bottom: 80px;
+    }
+    .sec2-con{
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .sec2-rights{
+        margin-top: 80px;
+        width: 550px;
+        height: 600px;
+    }
+    .sec3.animate{
+        display: none;
+    }
+    .sec-4 {
+        padding: 0;
+        padding-top: 100px;
+        padding-bottom: 80px;
+    }
+    .sec4-con{
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .sec4-rights{
+        margin-top: 80px;
+        width: 550px;
+        height: 600px;
+    }
+    .sec5-pic{
+        width: 500px;
+    }
+    .sec-6 {
+        padding: 150px 0px 200px 0px;
+    }
+    .sec-6 .top-txtes{
+        padding-right: 0;
+        align-items: center;
+    }
+    .sec-6 .h-box{
+        padding-left: 80px;
+    }
+    .sec-6 .txt-box{
+        margin-left: 80px;
+    }
+    .footer{
+        padding: 50px;
+        height: 400px;
+    }
+    .footer-logo{
+        width: 150px;
+    }
+    .footer .sub-menu p{
+        font-size: 0.8rem;
+    }
+    .footer .main-t{
+        font-size: 1.2rem;
+    }
+    .footer-right .btn p {
+        font-size: 0.8rem;
+        line-height: 50px;
+    }
+    .footer-right .btn{
+        height: 50px;
+    }
+    
+}
+@media(max-width: 1100px){
+    .header{
+        width: 800px;
+    }
+    .head-logo{
+        width: 140px;
+        height: 40px;
+    }
+    .main-1,.main-2{
+        justify-content: center;
+    }
+    .sec-5{
+        height: auto;
+        padding: 200px 100px;
+    }
+    .sec-6 .h-box{
+        width: auto;
+        padding-left: 0;
+    }
+    .sec-6 .txt-box{
+        margin-left: 0;
+    }
+    .sec-6 .h-box:nth-child(2){
+        margin-top: 50px;
+    }
+    .sec6-box-con{
+        flex-direction: column;
+        align-items: center;
+    }
+    .sec-6 .top-txtes{
+        margin-right: 0;
+    }
+}
+@media(max-width: 900px){
+    .header{
+        width: 700px;
+        height: 80px;
+    }
+    label[for="menu-btn"]{
+        margin-top: 29px;
+    }
+    .head-right{
+        margin-top: 27px;
+        font-size: 1.1rem;
+    }
+    .main-head-txt p{
+        font-size: 4.5rem;
+    }
+    .roll-btn h3 {
+        font-size: 1.2rem;
+    }
+    .roll-btn{
+        width: 200px;
+        height: 70px;
+        line-height: 70px;
+    }
+    section.banner{
+        height: auto;
+        padding-bottom: 100px;
+    }
+    .sec-1 .pint {
+        font-size: 1.5rem;
+    }
+    .sec-1 .name {
+        font-size: 2.5rem;
+    }
+    .sec-1 .roll-btn{
+        margin-top: 150px;
+    }
+    .main-1, .main-2{
+        font-size: 2.5rem;
+    }
+    h4.subs{
+        padding-right: 0;
+        display: flex;
+        align-items: center;
+    }
+    .sec2-txtes{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .sec-3{
+        padding: 0 50px;
+    }
+    .sec-3 .fixed-head-txt h1 {
+        font-size: 2rem;
+    }
+    .sec-3 .items{
+        width: 300%;
+    }
+    .sec-3 .item{
+        width: 100%;
+    }
+    .sub-sec4-txt{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .main-sec4-txt{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .main-sec5-txt h2 {
+        font-size: 2.5rem;
+    }
+    .sec5-pic img{
+        display: none;
+    }
+    .sec5_txt_btn{
+        padding: 40px 0px 0px 100px;
+    }
+    .sec-6{
+        padding: 150px 0px 100px 0px;
+    }
+    .sec-6 .mains{
+        font-size: 3.5rem;
+    }
+    .sec-6 .top-txtes{
+        margin-bottom: 85px;
+    }
+    .sub-sec6-txt span {
+        margin-top: 30px;
+        font-size: 1.2rem;
+    }
+    .footer{
+        height: auto;
+        padding: 30px;
+    }
+    .footer .main-t {
+        margin-bottom: 15px;
+        font-size: 1rem;
+    }
+    .footer .sub-menu p{
+        margin-bottom: 10px;
+    }
+    .footer-left{
+        margin-bottom: 30px;
+        margin-right: 220px;
+    }
+    .footer_left_right{
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-right .btn{
+        width: 120px;
+    }
+    .footer input{
+        font-size: 0.8rem;
+    }
+    .footer-logo{
+        top: 0;
+        left: 600px;
+        transform: translateX(0);
+        width: 100px;
+    }
+}
+@media(max-width: 700px){
+    .head-logo{
+        width: 100px;
+        height: 30px;
+    }
+    .header{
+        width: 500px;
+        height: 60px;
+    }
+    label[for="menu-btn"] {
+        margin-top: 20px;
+        width: 25px;
+        height: 15px;
+    }
+    .head-right{
+        font-size: 0.8rem;
+        margin-top: 22px;
+    }
+    .header-txt-btn{
+        margin-left: 50px;
+    }
+    .main-head-txt p {
+        font-size: 3.8rem;
+    }
+    .head-txtes{
+        height: auto;
+    }
+    .roll-btn {
+        width: 150px;
+        height: 50px;
+        line-height: 50px;
+    }
+    .roll-btn h3 {
+        font-size: 0.9rem;
+    }
+    section.banner{
+        padding-top: 40px;
+    }
+    .menu-bar-icon .menu {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+    }
+    .menu-icon{
+        margin-top: 100px;
+        height: auto;
+    }
+    h2.txt1{
+        margin-right: 20px;
+    }
+    .main-1, .main-2 {
+        font-size: 2.2rem;
+    }
+    h4.subs{
+        font-size: 1.2rem;
+    }
+    .sec-1{
+        padding: 100px 20px 50px 10px;
+    }
+    .sec-1 .background{
+        width: 350px;
+        height: 450px;
+        padding-left: 75px;
+    }
+    .sec-1 .img-box{
+        width: 200px;
+        height: 200px;
+        margin-top: 125px;
+    }
+    .sec-1 .slide{
+        margin-right: 20px;
+    }
+    .sec-1 .roll-btn{
+        margin-top: 180px;
+        width: 200px;
+        height: 80px;
+        line-height: 80px;
+    }
+    .sec-1 .roll-btn h3{
+        font-size: 1.1rem;
+    }
+    .sec-1 .pint{
+        font-size: 1.2rem;
+    }
+    .sec-1 .name{
+        font-size: 2.1rem;
+    }
+    .sec-1 .flavor{
+        font-size: 1.1rem;
+        white-space: wrap;
+        margin-top: 15px;
+    }
+    .sec-1 .txt-box{
+        top: 400px;
+    }
+    
+    .main-sec2-txt {
+        font-size: 3.3rem;
+        margin-bottom: 25px;
+    }
+    .sec2-sub1 p, .sec2-sub2 span {
+        font-size: 1.1rem;
+    }
+    .sec2-rights{
+        margin-top: 60px;
+        width: 450px;
+        height: 500px;
+    }
+    .sec-3{
+        padding: 30px;
+        height: 550px;
+    }
+    .sec-3 .fixed-head-txt h1 {
+        font-size: 1.8rem;
+    }
+    .sec-3 .item-txt{
+        font-size: 1.1rem;
+    }
+    .sec-4 {
+        padding-bottom: 50px;
+    }
+    .sec4-rights{
+        margin-top: 60px;
+        width: 450px;
+        height: 500px;
+    }
+    .main-sec4-txt {
+        font-size: 3.3rem;
+    }
+    .sub-sec4-txt {
+        font-size: 1.1rem;
+    }
+    .sec-5{
+        padding: 100px 0;
+    }
+    .sec-6 .mains {
+        font-size: 3.3rem;
+    }
+    .sub-sec6-txt span {
+        font-size: 1.1rem;
+    }
+    .sec-6 .h-box img{
+        width: 350px;
+        height: 400px;
+    }
+    .sec-6 .txt-box{
+        width: 350px;
+        height: 400px;
+    }
+    .sec-6 .txt-box p {
+        font-size: 2rem;
+    }
+    .footer-logo{
+        left: 450px;
+    }
+    .footer .main-t{
+        font-size: 0.9rem;
+    }
+    .footer .sub-menu p {
+        font-size: 0.7rem;
+        margin-bottom: 8px;
+    }
+}
+@media(max-width: 600px){
+    .main-head-txt p {
+        font-size: 3.5rem;
+    }
+    .roll-btn h3 {
+        font-size: 0.8rem;
+    }
+    .main-1, .main-2 {
+        font-size: 1.8rem;
+    }
+    h4.subs {
+        font-size: 1rem;
+    }
+    .sec-1 .name {
+        font-size: 2rem;
+    }
+    .sec-1 .flavor{
+        font-size: 1rem;
+    }
+    .sec-1 .roll-btn{
+        margin-top: 150px;
+        width: 150px;
+        height: 60px;
+        line-height: 60px;
+    }
+    .sec-1 .roll-btn h3 {
+        font-size: 0.9rem;
+    }
+    .sec-1 {
+        padding: 100px 20px 0px 10px;
+    }
+    .main-sec2-txt{
+        font-size: 3rem;
+    }
+    .sec2-sub1 p, .sec2-sub2 span {
+        font-size: 1rem;
+    }
+    .sec-2 .roll-btn{
+        width: 200px;
+    }
+    .sec-2 .roll-btn h3{
+        font-size: 1rem;
+    }
+    .sec2-rights{
+        width: 350px;
+        height: 400px;
+    }
+    .sec-3{
+        padding: 0px;
+    }
+    .sec-3 .fixed-head-txt h1 {
+        font-size: 1.6rem;
+    }
+    .sec-3 .item-txt{
+        font-size: 1rem;
+    }
+    .sec-3 .item-symbol{
+        width: 80px;
+        height: 80px;
+    }
+    .main-sec4-txt {
+        font-size: 3rem;
+    }
+    .sub-sec4-txt {
+        font-size: 1rem;
+    }
+    .sec-4 .roll-btn{
+        width: 200px;
+    }
+    .sec-4 .roll-box h3{
+        font-size: 1rem;
+    }
+    .sec4-rights{
+        width: 350px;
+        height: 400px;
+    }
+    .sec5_txt_btn{
+        width: 450px;
+        height: 620px;
+        overflow: hidden;
+    }
+    .main-sec5-txt h2 {
+        font-size: 2rem;
+    }
+    .sub-sec5-txt span {
+        font-size: 0.9rem;
+    }
+    .sec5-hover-menu {
+        height: auto;
+    }
+    .sec5-hover-menu a {
+        font-size: 1.1rem;
+        padding-bottom: 10px;
+    }
+    .sec-5 .roll-btn {
+        width: 150px;
+        height: 50px;
+        line-height: 50px;
+    }
+    .sec-5 .roll-btn h3{
+        font-size: 0.8rem;
+        letter-spacing: 0;
+    }
+    .sec-6 .mains{
+        font-size: 3rem;
+    }
+    .sub-sec6-txt span{
+        font-size: 0.9rem;
+    }
+    .sec-6 .txt-box p {
+        font-size: 1.6rem;
+    }
+    .footer{
+        padding: 60px;
+    }
+    .footer .main-t {
+        font-size: 0.8rem;
+        margin-bottom: 20px;
+    }
+    .footer .sub-menu p{
+        font-size: 0.6rem;
+    }
+    .footer-right .btn{
+        width: 100px;
+        height: 40px;
+    }
+    .footer-right .btn p {
+        line-height: 40px;
+        font-size: 0.7rem;
+    }
+    .footer-logo {
+        top: 10px;
+        left: 380px;
+    }
+    .footer input {
+        font-size: 0.6rem;
+        width: 250px;
+    }
+    .footer-left .menu {
+        margin-right: 60px;
+    }
+}
+@media(max-width: 500px){
+    .header{
+        width: 400px;
+        height: 50px;
+    }
+    .head-logo{
+        width: 70px;
+        height: 40px;
+        margin-top: 10px;
+    }
+    .main-head-txt p {
+        font-size: 3rem;
+    }
+    label[for="menu-btn"]{
+        width: 20px;
+        height: 10px;
+        margin-left: 25px;
+    }
+    .menu-bar-icon .menu{
+        font-size: 2rem;
+    }
+    .head-right {
+        font-size: 0.7rem;
+        margin-top: 20px;
+        margin-right: 25px;
+    }
+    .roll-btn {
+        width: 120px;
+        height: 40px;
+        line-height: 40px;
+    }
+    .roll-btn h3 {
+        font-size: 0.7rem;
+    }
+    h2.txt1{
+        margin-right: 15px;
+    }
+    .main-1, .main-2 {
+        font-size: 1.5rem;
+    }
+    h4.subs {
+        font-size: 0.9rem;
+    }
+    .main-sec2-txt {
+        font-size: 2.5rem;
+    }
+    .sec2-sub1 p, .sec2-sub2 span {
+        font-size: 0.9rem;
+    }
+    .sec-2 .roll-btn {
+        margin-top: 50px;
+        width: 150px;
+        height: 50px;
+    }
+    .sec-2 .roll-btn h3{
+        letter-spacing: 1px;
+        font-size: 0.7rem;
+        line-height: 50px;
+    }
+    .sec2-rights {
+        width: 320px;
+        height: 300px;
+    }
+    .sec-3{
+        height: 450px;
+    }
+    .sec-3 span{
+        font-size: 0.7rem;
+    }
+    .sec-3 .fixed-head-txt h1 {
+        font-size: 1.5rem;
+    }
+    .sec-3 .tabs{
+        width: 100%;
+    }
+    .sec-3 .item{
+        padding: 0px;       
+    }
+    .sec-3 .item-txt {
+        font-size: 0.9rem;
+    }
+    .sec-3 .item-symbol{
+        margin-top: 20px;
+    }
+    .btn label{
+        width: 10px;
+        height: 10px;
+    }
+    input[id="tab1"]:checked ~ .tabs .items{
+        left: 0;
+    }
+    input[id="tab2"]:checked ~ .tabs .items{
+        left: -100%;
+    }
+    input[id="tab3"]:checked ~ .tabs .items{
+        left: -200%;
+    }
+    .main-sec4-txt {
+        font-size: 2.6rem;
+    }
+    .sub-sec4-txt {
+        font-size: 0.9rem;
+    }
+    .sec-4 .roll-btn{
+        margin-top: 50px;
+        width: 150px;
+        height: 50px;
+    }
+    .sec-4 .roll-box h3{
+        font-size: 0.7rem;
+        letter-spacing: 1px;
+        line-height: 50px;
+    }
+    .sec4-rights{
+        width: 320px;
+        height: 300px;
+    }
+    .sec5_txt_btn{
+        width: 400px;
+    }
+    .sec5_txt_btn {
+        padding: 40px 0px 0px 90px;
+    }
+    .sec-5 .roll-btn {
+        width: 120px;
+        height: 40px;
+        line-height: 40px;
+    }
+    .sec-5 .roll-btn h3{
+        font-size: 0.6rem;
+    }
+    .sec-6 .mains {
+        font-size: 2.5rem;
+    }
+    .sub-sec6-txt span {
+        font-size: 0.8rem;
+    }
+    .sec-6 .top-txtes {
+        margin-bottom: 65px;
+    }
+    .sec-6 .h-box img {
+        width: 280px;
+        height: 300px;
+    }
+    .sec-6 .txt-box{
+        width: 280px;
+        height: 300px;
+    }
+    .sec-6 {
+        padding: 100px 0px ;
+    }
+    .footer{
+        padding: 30px 50px;
+        display: flex;
+        align-items: center;
+    }
+    .footer-logo{
+        width: 80px;
+        height: 80px;
+        top: 20px;
+        left: 300px;
+    }
+    .footer .sub-menu p {
+        font-size: 0.4rem;
+    }
+    .footer input{
+        width: 200px;
+    }
+    .footer_left_right{
+        align-items: flex-start;
+    }
+    .footer-right .btn {
+        height: 30px;
+    }
+    .footer-right .btn p{
+        line-height: 30px;
+        font-size: 0.6rem;
+    }
+}
+@media(max-width: 400px){
+    .header {
+        width: 340px;
+        height: 40px;
+    }
+    label[for="menu-btn"]{
+        width: 15px;
+        height: 11px;
+        margin-top: 15px;
+    }
+    .menu-bar-box {
+        width: 300px;
+    }
+    .head-right{
+        font-size: 0.6rem;
+        margin-top: 14px;
+    }
+    .main-head-txt p {
+        font-size: 2rem;
+    }
+    .sub-head-txt a{
+        font-size: 0.5rem;
+        margin-top: 0;
+    }
+    .header-txt-btn {
+        margin-left: 20px;
+        margin-top: 50px;
+    }
+    .roll-btn h3 {
+        font-size: 0.6rem;
+        letter-spacing: 0;
+    }
+    .roll-btn {
+        width: 100px;
+        height: 30px;
+        line-height: 30px;
+    }
+    .main-s {
+        margin-left: 5px;
+    }
+    section.banner{
+        padding-bottom: 40px;
+    }
+    .main-1, .main-2 {
+        font-size: 1.3rem;
+    }
+    h2.txt1 {
+        margin-right: 10px;
+    }
+    h4.subs {
+        font-size: 0.8rem;
+    }
+    .top-txtes{
+        margin-bottom: 70px;
+    }
+    .sec-1 {
+        padding: 90px 10px;
+    }
+    .sec-1 .background {
+        width: 200px;
+        height: 250px;
+        padding-left: 50px;
+    }
+    .sec-1 .img-box {
+        width: 100px;
+        height: 100px;
+        margin-top: 75px;
+    }
+    .sec-1 .roll-btn{
+        margin-top: 100px;
+        width: 100px;
+        height: 40px;
+        line-height: 40px;
+    }
+    .sec-1 .roll-btn h3 {
+        font-size: 0.6rem;
+    }
+    .sec-1 .txt-box{
+        top: 210px;
+    }
+    .sec-1 .pint {
+        font-size: 1rem;
+    }
+    .sec-1 .name {
+        font-size: 1.25rem;
+        white-space: nowrap;
+        margin-top: 6px;
+    }
+    .sec-1 .flavor {
+        font-size: 0.7rem;
+        font-weight: 100;
+        margin-top: 10px;
+        white-space: nowrap;
+    }
+    .sec-1 .slide-wrapper{
+        height: auto;
+    }
+    .sec-2{
+        padding: 50px 0;
+    }
+    .main-sec2-txt {
+        font-size: 2.25rem;
+    }
+    .sec2-sub1 p, .sec2-sub2 span {
+        font-size: 0.8rem;
+    }
+    .sec2-sub2 {
+        margin-top: 20px;
+    }
+    .sec-2 .roll-btn h3{
+        letter-spacing: 0;
+        font-size: 0.8rem;
+    }
+    .sec-3 .fixed-head-txt{
+        margin-top: 0;
+    }
+    .sec-3{
+        height: 400px;
+        padding: 35px 56px 52px 56px;
+    }
+    .sec-3 span {
+        font-size: 0.6rem;
+        font-weight: 200;
+    }
+    .sec-3 .item-txt{
+        margin-top: 15px;
+        font-weight: 300;
+    }
+    .sec-3 .tabs{
+        height: 220px;
+    }
+    .sec-3 .btn{
+        bottom: 50px;
+    }
+    .sec-4{
+        padding-top: 70px;
+    }
+    .main-sec4-txt {
+        font-size: 2.25rem;
+    }
+    .sub-sec4-txt {
+        font-size: 0.8rem;
+    }
+    .sub-sec4-txt span{
+        font-weight: 200;
+        font-size: 0.8rem;
+    }
+    .sec-4 .roll-box h3{
+        font-size: 0.8rem;
+        letter-spacing: 0;
+    }
+    .sec4-rights{
+        margin-top: 40px;
+    }
+    .sec-5 {
+        padding: 75px 40px 105px 0;
+    }
+    .sec5_txt_btn {
+        padding: 30px 0px 0px 40px;
+    }
+    .sub-sec5-txt span {
+        font-size: 0.75rem;
+    }
+    .main-sec5-txt .bens-l {
+        margin-right: 10px;
+    }
+    .sec5-hover-menu a{
+        font-size: 1.38rem;
+    }
+    .sec-5 .roll-btn{
+        height: 38px;
+        line-height: 38px;
+    }
+    .sec-6 .mains {
+        font-size: 2rem;
+    }
+    .sub-sec6-txt span {
+        font-size: 0.7rem;
+        font-weight: 200;
+    }
+    .sec-6 .h-box img{
+        width: 245px;
+        height: 290px;
+    }
+    .sec-6 .txt-box{
+        width: 245px;
+        height: 290px;
+    }
+    .sec-6 .h-box:nth-child(2),
+    .sec-6 .h-box:nth-child(3),
+    .sec-6 .h-box:nth-child(4) {
+        margin-top: 30px;
+    }
+    .sec-6 .txt-box p {
+        font-size: 1rem;
+    } 
+    .sec-6 {
+        padding: 70px 0px;
+    }
+    .footer{
+        padding: 26px 45px;
+    }
+    .footer .main-t {
+        font-size: 0.7rem;
+        margin-bottom: 15px;
+    }
+    .footer .sub-menu p {
+        font-weight: 400;
+    }
+    .footer-logo{
+        width: 70px;
+        height: 70px;
+        top: 10px;
+        left: 280px;
+    }
+    .footer input {
+        width: 150px;
+    }
+    .footer-right .btn{
+        width: 80px;
+    }
+    .footer-right .btn p{
+        font-size: 0.5rem;
+    }
+
+}
+

@@ -1,0 +1,86 @@
+@charset "utf-8";
+
+/* 스크롤바 커스텀 */
+body::-webkit-scrollbar {
+    width: 20px;  /* 스크롤바의 너비 */
+}
+
+body::-webkit-scrollbar-thumb {
+    height: 30%; /* 스크롤바의 길이 */
+    background: #FCEDBA; /* 스크롤바의 색상 */  
+    border-radius: 10px;
+}
+
+body::-webkit-scrollbar-track {
+    background: rgba(33, 122, 244, .1);  /*스크롤바 뒷 배경 색상*/
+}
+
+/* pretendard 웹폰트 연결 */
+@import url('https://webfontworld.github.io/pretendard/Pretendard.css');
+
+/* mayeka 폰트 연결 */
+@font-face{
+    font-family: 'Mayeka_Light Demo';
+    src: url(../fonts/mayeka/Mayeka_Light\ Demo.otf);
+    font-weight: 100;
+    font-style: normal;
+} 
+@font-face{
+    font-family: 'Mayeka Regular Demo';
+    src: url(../fonts/mayeka/Mayeka\ Regular\ Demo.otf);
+    font-weight: 200;
+    font-style: normal;
+} 
+@font-face{
+    font-family: 'Mayeka Demi Bold Demo';
+    src: url(../fonts/mayeka/Mayeka\ Demi\ Bold\ Demo.otf);
+    font-weight: 300;
+    font-style: normal;
+} 
+@font-face{
+    font-family: 'Mayeka Bold Demo';
+    src: url(../fonts/mayeka/Mayeka\ Bold\ Demo.otf);
+    font-weight: 400;
+    font-style: normal;
+} 
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Mayeka Demi Bold Demo";
+
+}
+ul,ol,li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+}
+img,svg,video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: none;
+}
+span{
+    display: inline-block;
+}
+button{
+    outline: none;
+    border: none;
+    display: inline-block;
+    background-color: transparent;
+}
+html,body{
+    font-size: 100%;
+}
+body{
+    overflow-x: hidden !important;
+}
+#wrap{
+    overflow: hidden;
+    background-color: #96C4E0;
+}

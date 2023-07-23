@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <script src="./js/jquery-1.12.4.js"></script>
+    <script src="./js/script.js"></script>
+
+     <!-- 1. css cdn 링크 연결 -->
+     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> 
+     <!-- 2. script cdn 링크 연결 -->
+     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <title>BEN&JERRIES</title>
+</head>
+<body>
+    <!-- 전체를 감싸는 랩박스 -->
+    <div id="wrap">
+        <!-- 배너 (헤더와 txt부분)-->
+        <section class="banner">
+            <!-- 헤더 부분 -->
+            <div class="header">
+                <ul class="head">
+                    <div class="head-btn" data-aos="fade-zoom-in" data-aos-duration="2500">
+                        <input type="checkbox" id="menu-btn">
+                        <label for="menu-btn">
+                            <span></span><span></span><span></span>
+                        </label>
+                    </div>
+                    <div class="head-logo">
+                        <a href="#none">
+                            <img src="./img/head-log.png" alt="">
+                        </a>
+                    </div>
+                    <div class="head-right" data-aos="fade-zoom-in" data-aos-duration="2500">
+                        <li class="head-menu shop">
+                            <a href="#none">shop</a>
+                        </li>
+                        <li class="head-menu cart">
+                            <a href="#none">cart</a>
+                        </li>
+                        <li class="head-menu">
+                            <a href="#none">0</a>
+                        </li>
+                    </div>
+                </ul>
+               
+            </div>
+
+             <!-- 햄버거 버튼 클릭하면 열리는 서브메뉴박스 -->
+             <div class="menu-bar-box">
+                <ul class="menu-bar-icon">
+                    <div class="menu-bar">
+                        <li>
+                            <a href="#none" class="menu">HOME</a>
+                        </li>
+                        <li>
+                            <a href="#none" class="menu">SHOP</a>
+                        </li>
+                        <li>
+                            <a href="#none" class="menu">STORE</a>
+                        </li>
+                        <li>
+                            <a href="#none" class="menu">OTHERS</a>
+                        </li>
+                    </div>
+
+                    <div class="menu-icon">
+                        <div class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+                        </div>
+                        <div class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+
+            <!-- 텍스트 부분 -->
+            <div class="header-txt-btn" data-aos="fade-up" data-aos-duration="1200" data-aos-offset="300">
+                    <div class="head-txtes">
+                        <div class="main-head-txt">
+                            <div class="main-first">
+                                <p class="main-f">What</p>
+                                <p class="main-s">is</p>
+                            </div>
+                                <p>your</p>
+                                <p>happiness?</p>
+                        </div>
+                        <div class="sub-head-txt">
+                            <a href="#none">There are many ways to enjoy Ben & Jerry's</a>
+                        </div>
+                    </div>
+                    <div class="roll-btn">
+                        <div class="roll-box">
+                            <h3 class="moving btn1">
+                                taste it!
+                            </h3>
+                            <h3 class="moving btn2">
+                                taste it!
+                            </h3>
+                        </div>
+                    </div>
+            </div>
+        </section>
+        
+        <!-- sec-1 -->
+        <section class="sec-1">
+            <!-- txt와 css로 돌아가는 슬라이더 구성 -->
+            <div class="top-txtes">
+                <div class="main-sec1-txt">
+                    <div class="main-1">
+                        <h2 class="txt1">choose</h2>
+                        <h2 class="txt2">your</h2>
+                    </div>
+                    <div class="main-2">
+                        <h2 class="txt1">favorite</h2>
+                        <h2 class="txt2">flavor</h2>
+                    </div>
+                </div>
+                <div class="sub-sec1-txt">
+                    <h4 class="subs">
+                        여러분의 행복은 무엇인가요?<br>
+                        Ben & Jerry's 를 즐기는 방법은 정말 다양합니다.<br>
+                        자 어서 맛보세요.
+                    </h4>
+                </div>
+            </div>
+
+            <div class="sec-1-slider">
+                <div class="slide-wrapper">
+                    <div class="slide-wrap1">
+                        <div class="slide box1">
+                            <div class="background">
+                                <div class="img-box">
+                                    <img src="./img/sec1-van.webp" alt="">
+                                </div>
+                            </div>
+                            <div class="txt-box">
+                                <p class="pint">pint</p>
+                                <p class="name">vanila</p>
+                                <p class="flavor">풍부한 맛의<br>
+                                    크림같은 바닐라 아이스크림</p>
+                            </div>
+                            <div class="roll-btn">
+                                <div class="roll-box">
+                                    <h3 class="moving btn1">
+                                        buy now!
+                                    </h3>
+                                    <h3 class="moving btn2">
+                                        buy now!
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide box2">
+                            <div class="background">
+                                <div class="img-box">
+                                    <img src="./img/sec1-cherry.webp" alt="">
+                                </div>
+                            </div>
+                            <div class="txt-box">
+                                <p class="pint">pint</p>
+                                <p class="name">cherry garcia</p>
+                                <p class="flavor">가장 유명한 전설적인 락 밴드의 이름을 따서 만든<br>
+                                    체리 퍼지 플레이크가 들어간 최초의 아이스크림</p>
+                            </div>
+                            <div class="roll-btn">
+                                <div class="roll-box">
+                                    <h3 class="moving btn1">
+                                        buy now!
+                                    </h3>
+                                    <h3 class="moving btn2">
+                                        buy now!
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide box3">
+                            <div class="background">
+                                <div class="img-box">
+                                    <img src="./img/sec1-chocolate.webp" alt="">
+                                </div>
+                            </div>
+                            <div class="txt-box">
+                                <p class="pint">pint</p>
+                                <p class="name">Chocolate<Br>
+                                    Fuzzy Brownie</p>
+                                <p class="flavor">다크 초콜릿에 브라우니 퍼지 덩어리를 배합한 아이스크림</p>
+                            </div>
+                            <div class="roll-btn">
+                                <div class="roll-box">
+                                    <h3 class="moving btn1">
+                                        buy now!
+                                    </h3>
+                                    <h3 class="moving btn2">
+                                        buy now!
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide box4">
+                            <div class="background">
+                                <div class="img-box">
+                                    <img src="./img/sec1-caramel.webp" alt="">
+                                </div>
+                            </div>
+                            <div class="txt-box">
+                                <p class="pint">pint</p>
+                                <p class="name">Triple caramel<br>
+                                    chunks</p>
+                                <p class="flavor">캐러멜 청크로 뒤덮힌 캐러멜 소용돌이와<br>
+                                    퍼지가 어우러진 캐러멜 아이스크림</p>
+                            </div>
+                            <div class="roll-btn">
+                                <div class="roll-box">
+                                    <h3 class="moving btn1">
+                                        buy now!
+                                    </h3>
+                                    <h3 class="moving btn2">
+                                        buy now!
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide box5">
+                            <div class="background">
+                                <div class="img-box">
+                                    <img src="./img/sec1-coffee.webp" alt="">
+                                </div>
+                            </div>
+                            <div class="txt-box">
+                                <p class="pint">pint</p>
+                                <p class="name">coffee,coffee<br>
+                                buzz buzz buzz</p>
+                                <p class="flavor">커피 아이스크림 베이스에<br>
+                                    에스프레소 빈 퍼지가 들어있는 아이스크림</p>
+                            </div> 
+                            <div class="roll-btn">
+                                <div class="roll-box">
+                                    <h3 class="moving btn1">
+                                        buy now!
+                                    </h3>
+                                    <h3 class="moving btn2">
+                                        buy now!
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide box6">
+                            <div class="background">
+                                <div class="img-box">
+                                    <img src="./img/sec1-mintchoco.webp" alt="">
+                                </div>
+                            </div>
+                            <div class="txt-box">
+                                <p class="pint">pint</p>
+                                <p class="name">mint Chocolate<br> 
+                                    cookie</p>
+                                <p class="flavor">신선한 민트 아이스크림 베이스에 초콜릿 쿠키가<br>
+                                    덩어리 채 들어있는 아이스크림</p>
+                            </div>
+                            <div class="roll-btn">
+                                <div class="roll-box">
+                                    <h3 class="moving btn1">
+                                        buy now!
+                                    </h3>
+                                    <h3 class="moving btn2">
+                                        buy now!
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide box7">
+                            <div class="background">
+                                <div class="img-box">
+                                    <img src="./img/sec1-halfbaked.webp" alt="">
+                                </div>
+                            </div>
+                            <div class="txt-box">
+                                <p class="pint">pint</p>
+                                <p class="name">half baked</p>
+                                <p class="flavor">초코칩 쿠키도우와 퍼지 브라우니 청크가<br>
+                                    어우러진 초콜릿&바닐라 아이스크림</p>
+                            </div>
+                            <div class="roll-btn">
+                                <div class="roll-box">
+                                    <h3 class="moving btn1">
+                                        buy now!
+                                    </h3>
+                                    <h3 class="moving btn2">
+                                        buy now!
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide box8">
+                            <div class="background">
+                                <div class="img-box">
+                                    <img src="./img/sec1-karamelsutra.webp" alt="">
+                                </div>
+                            </div>
+                            <div class="txt-box">
+                                <p class="pint">pint</p>
+                                <p class="name">karamel sutra</p>
+                                <p class="flavor">퍼지 칩과 부드러운 카라멜이 들어있는<br> 
+                                    초콜릿&카라멜 아이스크림</p>
+                            </div>
+                            <div class="roll-btn">
+                                <div class="roll-box">
+                                    <h3 class="moving btn1">
+                                        buy now!
+                                    </h3>
+                                    <h3 class="moving btn2">
+                                        buy now!
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide-wrap2">
+                        <div class="slide box1">
+                            <div class="background">
+                                <div class="img-box">
+                                    <img src="./img/sec1-van.webp" alt="">
+                                </div>
+                            </div>
+                            <div class="txt-box">
+                                <p class="pint">pint</p>
+                                <p class="name">vanila</p>
+                                <p class="flavor">풍부한 맛의<br>
+                                    크림같은 바닐라 아이스크림</p>
+                            </div>
+                            <div class="roll-btn">
+                                <div class="roll-box">
+                                    <h3 class="moving btn1">
+                                        buy now!
+                                    </h3>
+                                    <h3 class="moving btn2">
+                                        buy now!
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide box2">
+                            <div class="background">
+                                <div class="img-box">
+                                    <img src="./img/sec1-cherry.webp" alt="">
+                                </div>
+                            </div>
+                            <div class="txt-box">
+                                <p class="pint">pint</p>
+                                <p class="name">cherry garcia</p>
+                                <p class="flavor">가장 유명한 전설적인 락 밴드의 이름을 따서 만든<br>
+                                    체리 퍼지 플레이크가 들어간 최초의 아이스크림</p>
+                            </div>
+                            <div class="roll-btn">
+                                <div class="roll-box">
+                                    <h3 class="moving btn1">
+                                        buy now!
+                                    </h3>
+                                    <h3 class="moving btn2">
+                                        buy now!
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide box3">
+                            <div class="background">
+                                <div class="img-box">
+                                    <img src="./img/sec1-chocolate.webp" alt="">
+                                </div>
+                            </div>
+                            <div class="txt-box">
+                                <p class="pint">pint</p>
+                                <p class="name">Chocolate<Br>
+                                    Fuzzy Brownie</p>
+                                <p class="flavor">다크 초콜릿에 브라우니 퍼지 덩어리를 배합한 아이스크림</p>
+                            </div>
+                            <div class="roll-btn">
+                                <div class="roll-box">
+                                    <h3 class="moving btn1">
+                                        buy now!
+                                    </h3>
+                                    <h3 class="moving btn2">
+                                        buy now!
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide box4">
+                            <div class="background">
+                                <div class="img-box">
+                                    <img src="./img/sec1-caramel.webp" alt="">
+                                </div>
+                            </div>
+                            <div class="txt-box">
+                                <p class="pint">pint</p>
+                                <p class="name">Triple caramel<br>
+                                    chunks</p>
+                                <p class="flavor">캐러멜 청크로 뒤덮힌 캐러멜 소용돌이와<br>
+                                    퍼지가 어우러진 캐러멜 아이스크림</p>
+                            </div>
+                            <div class="roll-btn">
+                                <div class="roll-box">
+                                    <h3 class="moving btn1">
+                                        buy now!
+                                    </h3>
+                                    <h3 class="moving btn2">
+                                        buy now!
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide box5">
+                            <div class="background">
+                                <div class="img-box">
+                                    <img src="./img/sec1-caramel.webp" alt="">
+                                </div>
+                            </div>
+                            <div class="txt-box">
+                                <p class="pint">pint</p>
+                                <p class="name">coffee,coffee<br>
+                                buzz buzz buzz</p>
+                                <p class="flavor">커피 아이스크림 베이스에<br>
+                                    에스프레소 빈 퍼지가 들어있는 아이스크림</p>
+                            </div>
+                            <div class="roll-btn">
+                                <div class="roll-box">
+                                    <h3 class="moving btn1">
+                                        buy now!
+                                    </h3>
+                                    <h3 class="moving btn2">
+                                        buy now!
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide box6">
+                            <div class="background">
+                                <div class="img-box">
+                                    <img src="./img/sec1-mintchoco.webp" alt="">
+                                </div>
+                            </div>
+                            <div class="txt-box">
+                                <p class="pint">pint</p>
+                                <p class="name">mint Chocolate<br> 
+                                    cookie</p>
+                                <p class="flavor">신선한 민트 아이스크림 베이스에 초콜릿 쿠키가<br>
+                                    덩어리 채 들어있는 아이스크림</p>
+                            </div>
+                            <div class="roll-btn">
+                                <div class="roll-box">
+                                    <h3 class="moving btn1">
+                                        buy now!
+                                    </h3>
+                                    <h3 class="moving btn2">
+                                        buy now!
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide box7">
+                            <div class="background">
+                                <div class="img-box">
+                                    <img src="./img/sec1-halfbaked.webp" alt="">
+                                </div>
+                            </div>
+                            <div class="txt-box">
+                                <p class="pint">pint</p>
+                                <p class="name">half baked</p>
+                                <p class="flavor">초코칩 쿠키도우와 퍼지 브라우니 청크가<br>
+                                    어우러진 초콜릿&바닐라 아이스크림</p>
+                            </div>
+                            <div class="roll-btn">
+                                <div class="roll-box">
+                                    <h3 class="moving btn1">
+                                        buy now!
+                                    </h3>
+                                    <h3 class="moving btn2">
+                                        buy now!
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide box8">
+                            <div class="background">
+                                <div class="img-box">
+                                    <img src="./img/sec1-karamelsutra.webp" alt="">
+                                </div>
+                            </div>
+                            <div class="txt-box">
+                                <p class="pint">pint</p>
+                                <p class="name">karamel sutra</p>
+                                <p class="flavor">퍼지 칩과 부드러운 카라멜이 들어있는<br> 
+                                    초콜릿&카라멜 아이스크림</p>
+                            </div>
+                            <div class="roll-btn">
+                                <div class="roll-box">
+                                    <h3 class="moving btn1">
+                                        buy now!
+                                    </h3>
+                                    <h3 class="moving btn2">
+                                        buy now!
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- sec-2 -->
+        <section class="sec-2">
+            <!-- 왼쪽 txt와 오른쪽 img 구성 -->
+            <div class="sec2-con">
+                <div class="sec2_txt_btn" data-aos="fade-up" data-aos-duration="1200" data-aos-offset="300">
+                    <div class="sec2-txtes">
+                        <div class="main-sec2-txt">Free Cone day</div>
+                        <div class="sub-sec2-txt">
+                            <div class="sec2-sub1">
+                                <p>Free CoFree Cone day (프리 콘 데이)에는<br>
+                                전 세계의 평화, 사랑 그리고 아이스크림을 널리 알렸습니다</p>
+                            </div>
+                            <div class="sec2-sub2">
+                                <span>4월 18일 Free Cone day (프리 콘 데이)를 함께 즐겨요!</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="roll-btn">
+                        <div class="roll-box">
+                            <h3 class="moving btn1">
+                                view more!
+                            </h3>
+                            <h3 class="moving btn2">
+                                view more!
+                            </h3>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="sec2-rights" data-aos="fade-left" data-aos-duration="1200" data-aos-offset="300">
+                    <img src="./img/sec2-right.png" alt="">
+                </div>
+            </div>
+        </section>
+
+        <!-- sec-3 -->
+        <section class="sec-3">
+            <!-- 양옆으로 돌아가는 txt 부분 -->
+            <div class="sec3 animate box1">
+                <img src="./img/sec3-animation-1.png" alt="">
+            </div>
+            <div class="sec3 animate box2">
+                <img src="./img/sec3-animation-2.png" alt="">
+            </div>
+            <!-- 고정 head txt 와 누르면 돌아가는 슬라이드 부분 -->
+            <div class="tab-inner">
+                <input type="radio" name="tabmenu" id="tab1" checked>
+                <input type="radio" name="tabmenu" id="tab2">
+                <input type="radio" name="tabmenu" id="tab3">
+                
+                <div class="fixed-head-txt">
+                    <h1 class="head1">our</h1>
+                    <h1 class="head2">vision</h1>
+                </div>
+                <div class="tabs">
+                <!-- 마스크가 되는 부분 -->
+                    <div class="items">
+                    <!-- 슬라이드를 묶고 있는 박스 -->
+                        <div class="item item1">
+                            <p class="item-txt">
+                                사려깊게 엄선한 재료
+                            </p>
+                            <div class="item-symbol">
+                                <img src="./img/sec3-img1.webp" alt="">
+                            </div>
+                            <span>
+                                우리가 사용하는 재료와 성분은<br>
+                                긍정적인 변화를 지지하고<br>
+                                우리의 아이스크림이 환상적인 맛을 제공하는 것을 가능하게 합니다
+                            </span>
+                        </div>
+                        <div class="item item2">
+                            <p class="item-txt">
+                                연계된 번영과 성공
+                            </p>
+                            <div class="item-symbol">
+                                <img src="./img/sec3-img2.webp" alt="">
+                            </div>
+                            <span>
+                                우리는 우리의 사업과 관련된<br>
+                                모든 사람들을 위한 번영을<br>
+                                창출하는 것을 목표로 합니다
+                            </span>
+                        </div>
+                        <div class="item item3">
+                            <p class="item-txt">
+                                차별점
+                            </p>
+                            <div class="item-symbol">
+                                <img src="./img/sec3-img3.webp" alt="">
+                            </div>
+                            <span>
+                                우리는 우리가 반드시 관심을 가져야 한다고<br>
+                                생각되는 이슈에 대해 지원과 협조,<br> 
+                                다른 사람들에 대한 경각심을 이끌어 내고 있습니다
+                            </span>
+                        </div>
+                        
+                    </div>
+                </div>
+        
+                <div class="btn">
+                    <label for="tab1"></label>
+                    <label for="tab2"></label>
+                    <label for="tab3"></label>
+                </div>
+            </div>
+            
+        </section>
+
+        <!-- sec-4 -->
+        <section class="sec-4">
+            <!-- 왼쪽 txt와 오른쪽 img 구성 -->
+            <div class="sec4-con">
+                <div class="sec4_txt_btn" data-aos="fade-up" data-aos-duration="1200" data-aos-offset="300">
+                    <div class="sec4-txtes">
+                        <div class="main-sec4-txt">
+                            <p>Ice Cream<br>
+                            Delivery</p>
+                        </div>
+                        <div class="sub-sec4-txt">
+                            <span class="sub1">여러분은 마법을 믿나요?</span><br>
+                            <span class="sub2">여러분이 어디에 있든지,
+                                 가장 좋아하는 맛의 파인트가<br>
+                                 여러분 앞으로 배달될 수 있도록 주문할 수 있으니까요</span>
+                        </div>
+                    </div>
+
+                    <div class="roll-btn">
+                        <div class="roll-box">
+                            <h3 class="moving btn1">
+                                view more!
+                            </h3>
+                            <h3 class="moving btn2">
+                                view more!
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="sec4-rights" data-aos="fade-left" data-aos-duration="1200" data-aos-offset="300">
+                    <img src="./img/sec4-rights.png" alt="">
+                </div>
+                
+            </div>
+        </section>
+
+        <!-- sec-5 -->
+        <section class="sec-5">
+            <!-- 메뉴 영역과 겹치는 오른쪽 img -->
+            <div class="sec5-con">
+                <div class="sec5_txt_btn">
+                        <div class="sec5-txtes">
+                            <div class="main-sec5-txt">
+                                <h2>more</h2>
+                                <div class="bens">
+                                    <h2 class="bens-l">bens</h2>
+                                    <h2>flavor</h2>
+                                </div>
+                            </div>
+                            <div class="sub-sec5-txt">
+                                <span>
+                                    다양한 제품을 확인하고 자신에게 맞는 맛을 찾아보세요. 
+                                </span>
+                            </div>
+                        </div>
+
+                        <ul class="sec5-hover-menu">
+                            <li>
+                                <a href="#none">vegan</a>
+                            </li>
+                            <li>
+                                <a href="#none">sorbet</a>
+                            </li>
+                            <li>
+                                <a href="#none">gluten-free</a>
+                            </li>
+                            <li>
+                                <a href="#none">coffee</a>
+                            </li>
+                        </ul>
+                        
+                        <div class="roll-btn">
+                            <div class="roll-box">
+                                <h3 class="moving btn1">
+                                    view more!
+                                </h3>
+                                <h3 class="moving btn2">
+                                    view more!
+                                </h3>
+                            </div>
+                        </div>
+                </div>
+                
+                <div class="sec5-pic">
+                        <img src="./img/sec5-monkey.jfif" alt="">
+                </div>
+            </div>
+        </section>
+
+        <!-- sec-6 -->
+        <section class="sec-6">
+            <!-- txt와 호버하면 나타나는 부분 -->
+            <div class="top-txtes">
+                <div class="main-sec6-txt">
+                    <h2 class="mains">
+                        Ben & jerry`s<br>
+                        recipe
+                    </h2>
+                </div>
+                <div class="sub-sec6-txt">
+                    <span>
+                        벤앤제리스 아이스크림의 다양한 플레이버를 통해<br>
+                        차별화된 맛과 비주얼의 크리에이션 레시피를 만들어보세요
+                    </span>
+                </div>
+            </div>
+
+            <div class="hover-sec6-box">
+                <div class="sec6-box-con">
+                    <div class="h-box" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="300">
+                        <img src="./img/sec6-1.webp" alt="">
+                        <div class="txt-box">
+                            <p class="hover-1">Vegan Seven<br>
+                            Layer Bar Cupcake</p>
+                        </div>
+                    </div>
+                    <div class="h-box" data-aos="fade-up" data-aos-duration="1100" data-aos-offset="300">
+                        <img src="./img/sec6-2.webp" alt="">
+                        <div class="txt-box">
+                            <p class="hover-2">an ice cream<br>
+                                sandwich</p>
+                        </div>
+                    </div>
+                    <div class="h-box" data-aos="fade-up" data-aos-duration="1200" data-aos-offset="300">
+                        <img src="./img/sec6-3.jpg" alt="">
+                        <div class="txt-box">
+                            <p class="hover-3">Ice cream beer</p>
+                        </div>
+                    </div>
+                    <div class="h-box" data-aos="fade-up" data-aos-duration="1300" data-aos-offset="300">
+                        <img src="./img/sec6-4.webp" alt="">
+                        <div class="txt-box">
+                            <p class="hover-4">Ice cream<br> 
+                                shaved-ice<br>
+                                with cookies</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- footer -->
+        <section class="footer">
+            <div class="footer-con">
+                <div class="inner">
+                    <div class="footer_left_right">
+                        <div class="footer-left">
+                            <div class="menu">
+                                <p class="main-t">MENU</p>
+                                <div class="sub-menu">
+                                    <p>HOME</p>
+                                    <p>SHOP ALL</p>
+                                    <p>OUR STORY</p>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <p class="main-t">INFO</p>
+                                <div class="sub-menu">
+                                    <p>PRIVACY POLICY</p>
+                                    <p>TERMS&CONDITIONS</p>
+                                    <p>FAQ</p>
+                                    <p>SITE CREDIT</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer-right">
+                            <p class="main-t">KEEP UP TO DATE WITH SILVS.</p>
+                            <div class="footer-right-sub">
+                                <input type="text" placeholder="YOUR EMAIL" name="email" id="mail-text">
+                                <label for="email" id="mail-text"></label>
+                                <button class="btn">
+                                    <p>JOIN</p>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="footer-logo">
+                        <img src="./img/head-log.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- 4. 스크립트로 aos 실행시키기 -->
+    <script> AOS.init(); </script> 
+
+</body>
+</html>
