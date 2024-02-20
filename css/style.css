@@ -666,6 +666,8 @@ input[id="tab3"]:checked ~ .tabs .items{
     position: relative;
     top: 0;
     left: 0;
+    width: 1590px;
+    margin: 0 auto;
 }
 .sec5-txtes{
     margin-bottom: 50px;
